@@ -7,7 +7,7 @@ include('../includes/db_connection.php');
 
     <title>Students</title>
     <style>
-        .content-wrapper .container{
+        /* .content-wrapper .container{
             min-width: 20vw;
             height: 85vh;
             background: #f5f5f5;
@@ -23,7 +23,7 @@ include('../includes/db_connection.php');
         }
         h3{
              padding: 20px;
-        }
+        } */
     </style>
 
 <div class="content-wrapper">
@@ -47,6 +47,7 @@ include('../includes/db_connection.php');
                             <th>Photo</th>
                             <th>Action</th>
                         </tr>
+                        
                     </thead>
                     <tbody>
                         <?php
