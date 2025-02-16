@@ -15,17 +15,19 @@
     </header>
     <section class="main-section d-flex">
         <aside class="bg--secondary">
+            <div class="side-item toggle--btn my-2 text-white text-center d-flex justify-content-end align-items-center" id="toggleSidebar" ><span><i class="bi bi-list text-white h3 me-3"></i></span></div>
             <?php include "./components/sidebar.php" ?>
         </aside>
         <main class="content-wrapper bg-light">
-            <div class="container-fluid toggle--btn my-2" onclick="toggleSideBar()"><i class="bi bi-list h3"></i></div>
-            <div class="dynamic-content container-fluid">
-                
+            <div class="container-fluid">
+                <div class="dynamic-content">
+                </div>
             </div>
         </main>
     </section>  
     <!-- Script for load content dynamicaly as component in single page -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom script for load page like a compoent -->
     <script>
         function loadPageDynamic(directory){
             $.ajax({
@@ -52,11 +54,15 @@
             loadPageDynamic(`pages/${currentPage}`)
         })
         function toggleSideBar(){
+            const st = document.querySelectorAll(".side-text")
             const as = document.querySelector("aside")
             const ma = document.querySelector("main")
-            as.style.display = as.style.display === "none" ? "block" : "none"
-            ma.style.width = ma.style.width === "100%" ? "75%" : "100%"
+            as.style.width = as.style.width === "20%" ? "5%" : "20%"
+            ma.style.width = ma.style.width === "80%" ? "95%" : "80%"
+            st.forEach((el) => el.style.display = el.style.display === "block" ? "none" : "block")
+            // console.log(this)
         }
+        document.getElementById("toggleSidebar").addEventListener("click", toggleSideBar)
     </script>
 </body>
 </html>

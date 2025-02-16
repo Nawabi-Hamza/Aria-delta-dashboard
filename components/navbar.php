@@ -12,7 +12,7 @@
 
 
 <nav class="d-flex justify-content-between align-items-center bg--primary  px-4">
-    <h2 class="fw-bold">SuperAdmin Dashboard</h2>
+    <h2 class="fw-bold">Admin Dashboard</h2>
     <ul class="d-flex justify-content-between mt-2 me-4 gap-4 align-items-center">
          <li>
             <div class="gtranslate_wrapper"></div>

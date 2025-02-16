@@ -6,8 +6,8 @@
 :root{
     /* --primary-color: #E1FAF9; */
     /* --secondary-color: #023C40; */
-    --primary-color:rgba(49, 169, 225, 0.83);
-    --secondary-color:rgb(0, 0, 0);
+    --primary-color:rgba(225, 155, 49, 0.84);
+    --secondary-color:rgba(0, 0, 0, 0.83);
 }
 .bg--primary{
     background-color: var(--primary-color);
@@ -84,10 +84,17 @@ table td{
 @media only screen and (max-width: 1200px){
     .main-section{
         > aside{
-            width: 30%;
+            width: 5%;
+            .navbar-nav .side-item a{
+                padding: .8em;
+                text-align: center;
+            }
+            .navbar-nav .side-item span:nth-child(2){
+                display: none;
+            }
         }
         > main{
-            width: 70%;
+            width: 90%;
             overflow-y: auto;
         }
     }
