@@ -83,7 +83,7 @@
         a {
             text-decoration: none;
             color: #4CAF50;
-            font-weight: bold;
+            /* font-weight: bold; */
         }
 
         a:hover {
