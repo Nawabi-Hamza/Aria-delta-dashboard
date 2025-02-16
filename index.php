@@ -15,7 +15,7 @@
     </header>
     <section class="main-section d-flex">
         <aside class="bg--secondary">
-            <div class="side-item toggle--btn my-2 text-white text-center d-flex justify-content-end align-items-center" id="toggleSidebar" ><span><i class="bi bi-list text-white h3 me-3"></i></span></div>
+            <div class="side-item d-none md:d-block toggle--btn my-2 text-white text-center d-flex justify-content-end align-items-center" id="toggleSidebar" ><span><i class="bi bi-list text-white h4 me-2 md:me-3"></i></span></div>
             <?php include "./components/sidebar.php" ?>
         </aside>
         <main class="content-wrapper bg-light">

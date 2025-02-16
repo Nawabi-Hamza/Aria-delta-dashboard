@@ -135,38 +135,39 @@
     <div class="search-box">
         <input type="text" id="searchInput" onkeyup="searchReferral()" placeholder="Search by name, purpose, or staff..." />
     </div>
-
-    <!-- Table -->
-    <table id="referralTable">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Purpose</th>
-                <th>Referred by Staff</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php // if (count($customers) > 0): ?>
-                <?php // foreach ($customers as $customer): ?>
-                    <tr>
-                        <!-- <td><?php echo $customer['id']; ?></td>
-                        <td><?php echo $customer['name']; ?></td>
-                        <td><?php echo $customer['purpose']; ?></td>
-                        <td><?php echo $customer['username']; ?></td>
-                        <td>
-                            <a href="add_student.php?id=<?php echo $customer['id']; ?>">[Edit]</a>
-                        </td> -->
-                    </tr>
-                <?php // endforeach; ?>
-            <?php // else: ?>
+    <div class="table-responsive">
+        <!-- Table -->
+        <table id="referralTable">
+            <thead>
                 <tr>
-                    <td colspan="5">No referrals found.</td>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Purpose</th>
+                    <th>Referred by Staff</th>
+                    <th>Action</th>
                 </tr>
-            <?php // endif; ?>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <?php // if (count($customers) > 0): ?>
+                    <?php // foreach ($customers as $customer): ?>
+                        <tr>
+                            <!-- <td><?php echo $customer['id']; ?></td>
+                            <td><?php echo $customer['name']; ?></td>
+                            <td><?php echo $customer['purpose']; ?></td>
+                            <td><?php echo $customer['username']; ?></td>
+                            <td>
+                                <a href="add_student.php?id=<?php echo $customer['id']; ?>">[Edit]</a>
+                            </td> -->
+                        </tr>
+                    <?php // endforeach; ?>
+                <?php // else: ?>
+                    <tr>
+                        <td colspan="5">No referrals found.</td>
+                    </tr>
+                <?php // endif; ?>
+            </tbody>
+        </table>
+    </div>
 
     <p class="refresh-text">Page will refresh every 30 seconds.</p>
 </div>

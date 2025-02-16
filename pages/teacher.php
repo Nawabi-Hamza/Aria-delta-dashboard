@@ -57,7 +57,7 @@ $result = false;
 ?>
 
     
-<div class="container">
+<div class="container mt-4">
     <h2>Teacher Details Managed by You</h2>
     
     
