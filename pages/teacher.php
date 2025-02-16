@@ -62,7 +62,7 @@ $result = false;
     
     
      <div class="table-responsive">
-         <table class="table table-hover mt-4">
+         <table class="table table-hover table-info mt-4">
              <thead>
                  <tr>
                      <th>Teacher Name</th>
@@ -84,7 +84,8 @@ $result = false;
              </thead>
              
              <?php if ($result): ?>
-             <tbody>
+             <tbody class="table-light">
+                
                  <?php foreach ($result as $row): ?>
                      <tr>
                          <td><?php echo htmlspecialchars($row["teacherName"]); ?></td>

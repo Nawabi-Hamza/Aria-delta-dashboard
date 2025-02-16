@@ -21,75 +21,7 @@
 // $conn->close();
 ?>
 
-<style>
-        
-        h1 {
-            font-size: 2em;
-            color: #4CAF50;
-            margin-bottom: 20px;
-        }
 
-        p {
-            font-size: 1.2em;
-            line-height: 1.5;
-            color: #555;
-        }
-
-        .search-box {
-            margin-bottom: 20px;
-        }
-
-        input[type="text"] {
-            padding: 10px;
-            width: 100%;
-            max-width: 300px;
-            font-size: 1em;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        tr:hover {
-            background-color: #f5f5f5;
-        }
-
-        .footer {
-            font-size: 0.9em;
-            color: #888;
-            margin-top: 20px;
-        }
-
-        .refresh-text {
-            font-size: 0.8em;
-            color: #888;
-        }
-
-        a {
-            text-decoration: none;
-            color: #4CAF50;
-            /* font-weight: bold; */
-        }
-
-        a:hover {
-            color: #388E3C;
-        }
-    </style>
 <script type="text/javascript">
     // Function to refresh the page every 30 seconds
     setTimeout(function(){
@@ -128,16 +60,16 @@
 
 
 <div class="container mt-4 border border-1 p-4 bg-white rounded">
-    <h1>Referral Information</h1>
+    <h1 class="text-info">Referral Information</h1>
     <p>Here are the latest referrals:</p>
     
     <!-- Search Box -->
     <div class="search-box">
-        <input type="text" id="searchInput" onkeyup="searchReferral()" placeholder="Search by name, purpose, or staff..." />
+        <input type="text" class="form-control my-3 w-50" id="searchInput" onkeyup="searchReferral()" placeholder="Search by name, purpose, or staff..." />
     </div>
     <div class="table-responsive">
         <!-- Table -->
-        <table id="referralTable">
+        <table class=" table table-info">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -147,7 +79,7 @@
                     <th>Action</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="table-light">
                 <?php // if (count($customers) > 0): ?>
                     <?php // foreach ($customers as $customer): ?>
                         <tr>

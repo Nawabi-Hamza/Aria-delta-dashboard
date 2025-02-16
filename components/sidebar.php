@@ -9,3 +9,15 @@
     <li class="side-item"><a href="#" id="sidebarButton" data-target="pages/letters.php"><span><i class="bi bi-send h4"></i> </span><span class="side-text">Letters</span></a></li>
     <li class="side-item"><a href="#" id="sidebarButton" data-target="pages/referrals.php"><span><i class="bi bi-person-gear h4"></i> </span><span class="side-text">Referrals</span></a></li>
 </ul>
+
+
+<script>
+        document.addEventListener("DOMContentLoaded",function(){
+            const currentPage = window.location.hash.split("#")[1]
+            document.querySelectorAll("#sidebarButton").forEach( el => {
+                if(el.getAttribute("data-target").split("/")[1] === currentPage){
+                    el.classList.add("active")
+                }
+            })
+        })
+</script>

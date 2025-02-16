@@ -110,7 +110,7 @@
     <div class="">
         <div class="d-flex justify-content-between">
             <h1 class="dashboard-title">My Classes</h1>
-            <a id="btn-insert" class="btn btn-outline-success" data-toggle="modal" data-target="#insert-class-modal"><i class="fa fa-plus-circle"></i> Add New Subject</a>
+            <a id="btn-insert" class="btn btn-outline-info" data-toggle="modal" data-target="#insert-class-modal"><i class="fa fa-plus-circle"></i> Add New Subject</a>
         </div>
         <!-- Modal -->
         <div class="modal fade" id="insert-class-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -220,15 +220,15 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-outline-danger" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                            <button type="submit" class="btn btn-outline-success" value="btn-insert"><i class="fa fa-save"></i> Save</button>
+                            <button type="submit" class="btn btn-outline-info" value="btn-insert"><i class="fa fa-save"></i> Save</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
         <div class="table-responsive">
-            <table class="table table-hover">
-                <thead>
+            <table class="table table-info border  table-hover">
+                <thead class="table-info">
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Class</th>
@@ -244,7 +244,21 @@
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="table-light">
+                    <tr>
+                        <td scope="col">#</td>
+                        <td scope="col">Class</td>
+                        <td scope="col">Grade Level</td>
+                        <td scope="col">Room #</td>
+                        <td scope="col">Time</td>
+                        <td scope="col">Student Amount</td>
+                        <td scope="col">Enrolled Students</td>
+                        <td scope="col">Students Type</td>
+                        <td scope="col">Fee</td>
+                        <td scope="col">Caretaker</td>
+                        <td scope="col">Add By</td>
+                        <td scope="col">Action</td>
+                    </tr>
                     <?php
                         // $fetchClass = $conn->query("SELECT * FROM classes 
                         // INNER JOIN teachers ON classes.caretaker_id = teachers.id
@@ -264,7 +278,7 @@
                         <td><?php echo $row['teacherName']; ?></td>
                         <td><?php echo $row['username']; ?></td> -->
                         
-                        <td>
+                        <!-- <td>
                             <a data-toggle="modal" data-target="#edit-modal<?php // echo $row['id']; ?>"><i class="fa fa-pencil"></i></a>
     
                             <div class="modal fade" id="edit-modal<?php // echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -288,7 +302,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </td>
+                        </td> -->
                     </tr>
                     <?php // } ?>
                 </tbody>

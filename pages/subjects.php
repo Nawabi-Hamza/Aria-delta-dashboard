@@ -33,16 +33,16 @@
         <div class="">
             <div class="d-flex justify-content-between">
                 <h1 class="dashboard-title">My Subjects</h1>
-                <a id="btn-insert" class="btn btn-outline-success" data-toggle="modal" data-target="#subject-modal"><i class="fa fa-plus-circle"></i> Add New Subject</a>
+                <a id="btn-insert" class="btn btn-outline-info d-flex align-items-center gap-2" data-toggle="modal" data-target="#subject-modal"><i class="bi bi-plus-circle"></i> <span>Add New Subject</span></a>
             </div>
             <!-- Modal -->
             <div class="modal fade" id="subject-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <form action="subjects.php" method="POST" id="subjectForm">
-                            <div class="modal-header">
+                            <div class="modal-header d-flex justify-content-between">
                                 <h5 class="modal-title" id="exampleModalLabel"><b>Please Enter Subject's Complete Details</b></h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <button type="button" class="close btn btn-outline-danger" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
@@ -104,8 +104,8 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-danger" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                                <button type="submit" class="btn btn-outline-success" value="btn-insert"><i class="fa fa-save"></i> Save</button>
+                                <button type="button" class="btn btn-outline-danger" data-dismiss="modal"><i class="bi bi-times"></i> Close</button>
+                                <button type="submit" class="btn btn-outline-info" value="btn-insert"><i class="bi bi-save"></i> Save</button>
                             </div>
                         </form>
 
@@ -186,7 +186,7 @@
             </div>
             <br>
             <div class="table-responsive">
-                <table class="table table-hover">
+                <table class="table table-hover table-info border">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -198,7 +198,16 @@
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="table-light">
+                        <tr>
+                            <td scope="col">#</td>
+                            <td scope="col">Subject</td>
+                            <td scope="col">Pages</td>
+                            <td scope="col">Unites</td>
+                            <td scope="col">Class</td>
+                            <td scope="col">Teacher</td>
+                            <td scope="col">Action</td>
+                        </tr>
                         <?php
                         // $fetchSubjects = $conn->query("SELECT * FROM subjects 
                         //     INNER JOIN teachers ON subjects.teacher_id = teachers.id
@@ -213,7 +222,7 @@
                                 <td><?php echo $row['unites']; ?></td>
                                 <td><?php echo $row['class_name']; ?></td>
                                 <td><?php echo $row['teacherName']; ?></td> -->
-                                <td>
+                                <!-- <td>
                                     <a data-toggle="modal" data-target="#edit-modal"><i class="fa fa-pencil"></i></a>
     
                                     <div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -237,7 +246,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </td>
+                                </td> -->
                             </tr>
                         <?php
                             // $i++;

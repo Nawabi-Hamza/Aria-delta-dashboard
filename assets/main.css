@@ -6,7 +6,7 @@
 :root{
     /* --primary-color: #E1FAF9; */
     /* --secondary-color: #023C40; */
-    --primary-color:rgba(225, 155, 49, 0.84);
+    --primary-color:rgba(49, 207, 225, 0.72);
     --secondary-color:rgba(0, 0, 0, 0.83);
 }
 .bg--primary{
@@ -14,6 +14,12 @@
 }
 .bg--secondary{
     background-color: var(--secondary-color);
+}
+.active{
+    background-color: #F8F9FA;
+    color: black !important;
+    border-radius:1em 0em 0em 1em;
+    margin-left: 10px;
 }
 h1{
     font-size: 2em;
@@ -113,6 +119,7 @@ table td{
     h4{
         font-size: .5em;
     }
+    
     .main-section{
         > aside{
             width: 10%;

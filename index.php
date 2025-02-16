@@ -15,7 +15,7 @@
     </header>
     <section class="main-section d-flex">
         <aside class="bg--secondary">
-            <div class="side-item d-none md:d-block toggle--btn my-2 text-white text-center d-flex justify-content-end align-items-center" id="toggleSidebar" ><span><i class="bi bi-list text-white h4 me-2 md:me-3"></i></span></div>
+            <div class="side-item d-none d-md-flex toggle--btn my-2 text-white justify-content-end align-items-center" id="toggleSidebar" ><span><i class="bi bi-list text-white h4 me-2 me-lg-4"></i></span></div>
             <?php include "./components/sidebar.php" ?>
         </aside>
         <main class="content-wrapper bg-light">
@@ -48,6 +48,9 @@
             $('#defaultContent').hide();
             window.location.assign('#'+targetPage.split("/")[1])
             loadPageDynamic(targetPage)
+            document.querySelectorAll("#sidebarButton").forEach( el => el.classList.remove("active"))
+            this.classList.add("active")
+            console.log(this)
         });
         document.addEventListener("DOMContentLoaded",function(){
             const currentPage = window.location.hash.split("#")[1]

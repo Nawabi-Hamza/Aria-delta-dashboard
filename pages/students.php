@@ -102,21 +102,20 @@ if(isset($_POST['input'])){
 <div class="container-fluid mt-4">
     <h1 class="h3">Current Students</h1>
     <div class="container">
-      
             <div class="d-flex gap-1 ">
                 <input type="text" class="form-control" id="searchTextbox" placeholder="Search Any Student ...">
-                <div class="input-group-append"><button class="btn btn-outline-success"><i class="bi bi-search"></i></button></div>
+                <div class="input-group-append"><button class="btn btn-outline-info"><i class="bi bi-search"></i></button></div>
             </div>
         <div class="input-group mb-5">
-			
 		</div>
         <div class="fetched-data">
-
             <div class="fetch-search-data"></div>
+            <div class="d-flex justify-content-end">
+                <a href="add_student.php" class="btn btn-outline-info end"><i class="fa fa-plus-circle"></i> Add New Student</a>
+            </div>
             <div class="table-responsive">
-                <a href="add_student.php" class="btn btn-outline-success float-end"><i class="fa fa-plus-circle"></i> Add New Student</a>
-                <table class="table table-hover">
-                    <thead>
+                <table class="table table-info border table-hover">
+                    <thead class="table-info">
                         <tr>
                         <th scope="col">#</th>
                         <th scope="col">FirstName</th>
@@ -129,7 +128,29 @@ if(isset($_POST['input'])){
                         <th scope="col">Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="table-light">
+                    <tr>
+                        <td scope="col">#</td>
+                        <td scope="col">FirstName</td>
+                        <td scope="col">LastName</td>
+                        <td scope="col">Father Name</td>
+                        <td scope="col">Gender</td>
+                        <td scope="col">Asas #</td>
+                        <td scope="col">Tazkira #</td>
+                        <td scope="col">Class</td>
+                        <td scope="col">Action</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">#</td>
+                        <td scope="col">FirstName</td>
+                        <td scope="col">LastName</td>
+                        <td scope="col">Father Name</td>
+                        <td scope="col">Gender</td>
+                        <td scope="col">Asas #</td>
+                        <td scope="col">Tazkira #</td>
+                        <td scope="col">Class</td>
+                        <td scope="col">Action</td>
+                    </tr>
                         <?php 
                         $select = "SELECT * FROM students INNER JOIN classes ON students.class_id = classes.id";
                         $query = mysqli_query($conn, $select);
