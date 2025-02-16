@@ -100,17 +100,13 @@ if(isset($_POST['input'])){
 
 
 <div class="container-fluid mt-4">
-    <h2>Current Students</h2>
+    <h1 class="h3">Current Students</h1>
     <div class="container">
-        <div class="row">
-            <div class="col-md-8">
+      
+            <div class="d-flex gap-1 ">
                 <input type="text" class="form-control" id="searchTextbox" placeholder="Search Any Student ...">
-                <div class="input-group-append"><button class="btn btn-outline-success"><i class="fas fa-search"></i></button></div>
+                <div class="input-group-append"><button class="btn btn-outline-success"><i class="bi bi-search"></i></button></div>
             </div>
-            <div class="col-md-4">
-                <a href="add_student.php" class="btn btn-outline-success"><i class="fa fa-plus-circle"></i> Add New Student</a>
-            </div>
-        </div>
         <div class="input-group mb-5">
 			
 		</div>
@@ -118,6 +114,7 @@ if(isset($_POST['input'])){
 
             <div class="fetch-search-data"></div>
             <div class="table-responsive">
+                <a href="add_student.php" class="btn btn-outline-success float-end"><i class="fa fa-plus-circle"></i> Add New Student</a>
                 <table class="table table-hover">
                     <thead>
                         <tr>
